@@ -1,0 +1,446 @@
+.workflowSection {
+    padding: 8rem 3rem;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    background-color: #0A0A0A;
+    /* Darker card background from image */
+    border-radius: 24px;
+    padding: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease-out;
+}
+
+.container.isVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container:not(.isVisible) {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--gold);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.brandIcon {
+    color: var(--gold);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2.5rem;
+}
+
+/* LEFT COLUMN - CAPABILITIES */
+.capabilitiesCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+.capabilitiesCard:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 77, 0, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 77, 0, 0.05);
+}
+
+.capabilitiesTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.listIcon {
+    color: var(--gold);
+}
+
+.efficiencyCard {
+    margin-top: auto;
+    background: rgba(255, 77, 0, 0.05);
+    /* Slight gold tint */
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.effHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.effIcon {
+    color: var(--gold);
+}
+
+.effCompare {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.effOld {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.amountRed {
+    color: #EB5757;
+    /* Red color for cost */
+    font-weight: 600;
+}
+
+.effNew {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--gold);
+}
+
+.effFooter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.smallDot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--gold);
+    border-radius: 50%;
+}
+
+/* RIGHT COLUMN - VISUALIZATION */
+.visualCard {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* Grid background */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+.visualCard:hover {
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 77, 0, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 77, 0, 0.05);
+}
+
+.visualBadge {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(10, 10, 10, 0.8);
+}
+
+.visualContent {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.flowDiagram {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+}
+
+.stepNode {
+    flex: 1;
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    animation: float 4s ease-in-out infinite alternate;
+}
+
+.stepNode:nth-child(1) { animation-delay: 0s; }
+.stepNode:nth-child(3) { animation-delay: 1.5s; }
+.stepNode:nth-child(5) { animation-delay: 0.7s; }
+
+.stepNode:hover {
+    border-color: rgba(255, 77, 0, 0.5);
+    transform: scale(1.05) translateY(-5px) !important;
+    background: rgba(20, 20, 20, 0.95);
+    z-index: 10;
+}
+
+.stepNode.active {
+    border-color: var(--gold);
+    box-shadow: 0 0 30px rgba(255, 77, 0, 0.2);
+    animation: float 4s ease-in-out infinite alternate, pulse-glow 2.5s infinite;
+}
+
+.aiCoreBadge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: var(--gold);
+    color: var(--bg-primary);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.stepIcon {
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.stepTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.stepDesc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.flowArrow {
+    color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    animation: arrow-move 2s infinite ease-in-out;
+}
+
+.flowArrow:nth-of-type(1) { animation-delay: 0s; }
+.flowArrow:nth-of-type(2) { animation-delay: 0.5s; }
+
+/* Dashed curves inside visualization */
+.dashedCurve {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    border: 1px dashed rgba(255, 77, 0, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: rotate-slow 40s linear infinite;
+}
+
+.dashedCurve2 {
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    border: 1px dashed rgba(255, 77, 0, 0.15);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: rotate-slow 60s linear infinite reverse;
+}
+
+.visualFooter {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+}
+
+.statusIndicators {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.statusItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.statusDotGreen {
+    width: 6px;
+    height: 6px;
+    background-color: #27AE60;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #27AE60;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 20px rgba(255, 77, 0, 0.1); border-color: rgba(255, 77, 0, 0.4); }
+    50% { box-shadow: 0 0 40px rgba(255, 77, 0, 0.3); border-color: rgba(255, 77, 0, 1); }
+    100% { box-shadow: 0 0 20px rgba(255, 77, 0, 0.1); border-color: rgba(255, 77, 0, 0.4); }
+}
+
+@keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes arrow-move {
+    0%, 100% { transform: translateX(0); opacity: 0.2; }
+    50% { transform: translateX(10px); opacity: 0.8; color: var(--gold); }
+}
+
+@keyframes pulse-dot {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 1024px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .visualCard {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .workflowSection {
+        padding: 5rem 1.5rem;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .flowDiagram {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .flowArrow {
+        transform: rotate(90deg);
+        animation: arrow-move-vertical 2s infinite ease-in-out;
+    }
+
+    @keyframes arrow-move-vertical {
+        0%, 100% { transform: rotate(90deg) translateX(0); opacity: 0.2; }
+        50% { transform: rotate(90deg) translateX(10px); opacity: 0.8; color: var(--gold); }
+    }
+}

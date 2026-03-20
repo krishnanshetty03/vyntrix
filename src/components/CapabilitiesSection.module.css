@@ -1,0 +1,117 @@
+.capabilitiesSection {
+    padding: 8rem 3rem;
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.header {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 4rem;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--gold);
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background-color: var(--gold);
+    margin: 0 auto 2rem;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.listContainer {
+    width: 100%;
+    max-width: 800px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 16px;
+    padding: 1rem 3rem;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-card);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.listItem:last-child {
+    border-bottom: none;
+}
+
+.listItem:hover {
+    transform: translateX(10px);
+}
+
+.listItem:hover .itemTitle {
+    color: var(--gold);
+}
+
+.itemNumber {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.itemTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .capabilitiesSection {
+        padding: 5rem 1.5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .listContainer {
+        padding: 1rem 1.5rem;
+    }
+
+    .listItem {
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .itemTitle {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,398 @@
+.caseStudySection {
+    padding: 8rem 3rem;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    background-color: #0A0A0A;
+    /* Very dark background */
+    border-radius: 24px;
+    padding: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--gold);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.brandIcon {
+    color: var(--gold);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    position: relative;
+}
+
+/* Vertical Divider in the Middle */
+.dividerVertical {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-50%);
+}
+
+.dividerHighlight {
+    position: absolute;
+    left: -1px;
+    top: 40%;
+    width: 3px;
+    height: 80px;
+    background: var(--gold);
+    border-radius: 2px;
+}
+
+/* LEFT COLUMN - THE CHALLENGE */
+.challengeBadge {
+    display: inline-flex;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #EF4444;
+    /* Red color */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.columnTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.challengeCard {
+    background: rgba(239, 68, 68, 0.03);
+    border: 1px solid rgba(239, 68, 68, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.challengeMainText {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.challengeIcon {
+    color: #EF4444;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.challengeText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.challengeList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.challengeListItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.crossIcon {
+    color: #EF4444;
+}
+
+.metricsRow {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.metricBox {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.metricLabel {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+.metricValueRed {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #EF4444;
+    margin-bottom: 0.25rem;
+}
+
+.metricValueWhite {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.metricSub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.arrowRight {
+    color: rgba(255, 255, 255, 0.1);
+    align-self: center;
+    margin: 0 -0.75rem;
+    z-index: 1;
+}
+
+/* RIGHT COLUMN - THE SOLUTION */
+.solutionColumn {
+    padding-left: 2rem;
+    /* Add some space from the divider */
+}
+
+.solutionBadge {
+    display: inline-flex;
+    border: 1px solid rgba(255, 77, 0, 0.3);
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.stepsContainer {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Vertical line connecting steps */
+.stepsContainer::before {
+    content: '';
+    position: absolute;
+    top: 3.5rem;
+    bottom: 3.5rem;
+    left: 3.5rem;
+    /* align with numbers roughly */
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+}
+
+.stepCard {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.stepCard:hover {
+    border-color: rgba(255, 77, 0, 0.3);
+    background: rgba(255, 77, 0, 0.02);
+}
+
+.stepNumber {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.3);
+    width: 20px;
+    background: #0A0A0A;
+    /* matches stepsContainer bg to overlap line cleanly */
+    text-align: center;
+}
+
+.stepIcon {
+    color: var(--gold);
+    flex-shrink: 0;
+}
+
+.stepContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stepTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stepDesc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Key Result Card */
+.resultCard {
+    background: rgba(255, 77, 0, 0.05);
+    border: 1px solid rgba(255, 77, 0, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* Align bottom to match image */
+}
+
+.resultContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.resultHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.resultTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.resultChartIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+}
+
+@media (max-width: 1024px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .dividerVertical {
+        display: none;
+    }
+
+    .solutionColumn {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .caseStudySection {
+        padding: 5rem 1.5rem;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .challengeMainText {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .metricsRow {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .arrowRight {
+        display: none;
+    }
+
+    .stepCard {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .stepsContainer::before {
+        left: 2rem;
+    }
+
+    .resultCard {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}

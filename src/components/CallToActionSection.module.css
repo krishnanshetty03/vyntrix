@@ -1,0 +1,261 @@
+.section {
+    padding: 8rem 3rem 10rem 3rem;
+    /* Extra padding at bottom */
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Base glowing effect behind the entire section */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 600px;
+    background: radial-gradient(ellipse at center, rgba(255, 77, 0, 0.05) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 4rem;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Comparison Container */
+.comparisonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.traditionalCard,
+.vyntrixCard {
+    flex: 1;
+    max-width: 380px;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.traditionalCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.vyntrixCard {
+    background: rgba(255, 77, 0, 0.05);
+    border: 1px solid rgba(255, 77, 0, 0.3);
+    box-shadow: 0 0 40px rgba(255, 77, 0, 0.05);
+}
+
+.cardHeader,
+.vyntrixHeader {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.cardHeader {
+    color: var(--text-muted);
+}
+
+.vyntrixHeader {
+    color: var(--gold);
+}
+
+.strikethroughPrice {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #EF4444;
+    /* Red color */
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+/* Strikethrough line */
+.strikethroughPrice::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    width: 110%;
+    height: 3px;
+    background-color: #EF4444;
+    transform: translateY(-50%) rotate(-2deg);
+}
+
+.vyntrixPrice {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.cardSub,
+.vyntrixSub {
+    font-size: 0.85rem;
+}
+
+.cardSub {
+    color: var(--text-muted);
+}
+
+.vyntrixSub {
+    color: var(--gold);
+    opacity: 0.8;
+}
+
+/* VS Badge */
+.vsBadge {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #0A0A0A;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+/* Action Area */
+.actionArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.actionText {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.ctaButton {
+    background: var(--gold);
+    color: #0A0A0A;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 1.25rem 3rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 77, 0, 0.2);
+}
+
+.ctaButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: all 0.6s ease;
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(255, 77, 0, 0.4);
+}
+
+.ctaButton:hover::before {
+    left: 100%;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 6rem 1.5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .comparisonContainer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .traditionalCard,
+    .vyntrixCard {
+        width: 100%;
+        max-width: 100%;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .vsBadge {
+        margin: -1rem 0;
+        /* Overlap cards slightly on mobile */
+    }
+
+    .ctaButton {
+        width: 100%;
+        justify-content: center;
+    }
+}

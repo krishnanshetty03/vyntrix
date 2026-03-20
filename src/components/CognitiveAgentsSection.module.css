@@ -1,0 +1,415 @@
+.cognitiveSection {
+    padding: 8rem 3rem;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    background-color: #0A0A0A;
+    border-radius: 24px;
+    padding: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--gold);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.brandIcon {
+    color: var(--gold);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2.5rem;
+}
+
+/* LEFT COLUMN - CAPABILITIES */
+.capabilitiesCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.capabilitiesTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.listIcon {
+    color: var(--gold);
+}
+
+/* IMPACT ANALYSIS CARD */
+.impactCard {
+    margin-top: auto;
+    background: rgba(255, 77, 0, 0.05);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.impactHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.impactIcon {
+    color: var(--gold);
+}
+
+.impactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.impactText1 {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.impactFooter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* RIGHT COLUMN - VISUALIZATION */
+.visualCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 500px;
+}
+
+.neuralArchitectureTitle {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(255, 77, 0, 0.3);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.neuralDot {
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+.footerBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.statusIndicators {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.statusItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.dotBlue {
+    width: 6px;
+    height: 6px;
+    background: #3B82F6;
+    border-radius: 50%;
+}
+
+.dotYellow {
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+.versionText {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* NEURAL NETWORK LAYOUT */
+.neuralNetwork {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centerNode {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 77, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+    background: radial-gradient(circle, rgba(255, 77, 0, 0.15) 0%, transparent 70%);
+    animation: pulse 3s infinite ease-in-out;
+}
+
+.brainIcon {
+    color: var(--gold);
+    width: 48px;
+    height: 48px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 77, 0, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(255, 77, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 77, 0, 0);
+    }
+}
+
+/* SATELLITE NODES */
+.nodeCard {
+    position: absolute;
+    background: #0A0A0A;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    z-index: 10;
+    min-width: 130px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.nodeCard:hover {
+    border-color: rgba(255, 77, 0, 0.5);
+}
+
+.nodeIcon {
+    color: var(--gold);
+}
+
+.nodeTitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.nodeSubtitle {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* POSITIONS */
+.nodeTop {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nodeRight {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.nodeBottomRight {
+    bottom: 15%;
+    right: 20%;
+}
+
+.nodeBottomLeft {
+    bottom: 15%;
+    left: 20%;
+}
+
+.nodeLeft {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+/* CONNECTING LINES */
+.linesSvg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.linePath {
+    stroke: rgba(255, 77, 0, 0.2);
+    stroke-width: 1.5;
+    fill: none;
+    stroke-linecap: round;
+}
+
+/* DOTS MOVING ON LINES */
+.movingDot {
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    box-shadow: 0 0 8px var(--gold);
+}
+
+@media (max-width: 1024px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .cognitiveSection {
+        padding: 5rem 1.5rem;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .visualCard {
+        min-height: 400px;
+    }
+
+    .nodeCard {
+        padding: 0.75rem 1rem;
+        min-width: 100px;
+    }
+
+    .nodeTitle {
+        font-size: 0.75rem;
+    }
+
+    .nodeSubtitle {
+        display: none;
+    }
+}

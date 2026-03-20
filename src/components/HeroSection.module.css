@@ -1,0 +1,249 @@
+.heroSection {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 7rem 3rem 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.heroLeft {
+    flex: 1;
+    max-width: 600px;
+}
+
+.heroRight {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Badge */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: var(--gold-dim);
+    border: 1px solid rgba(255, 77, 0, 0.3);
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+}
+
+.badgeIcon {
+    font-size: 0.8rem;
+}
+
+/* Heading */
+.heading {
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.headingGold {
+    color: var(--gold);
+}
+
+.headingBar {
+    width: 48px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 2px;
+    margin: 1.5rem 0;
+}
+
+/* Description */
+.description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin-bottom: 2.25rem;
+}
+
+/* CTA Buttons */
+.ctaGroup {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.75rem;
+    background: var(--gold);
+    color: var(--bg-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
+}
+
+.btnPrimary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(255, 77, 0, 0.3);
+}
+
+.btnPrimary:active {
+    transform: translateY(0);
+}
+
+.btnSecondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.75rem;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1.5px solid var(--border-card);
+    border-radius: 4px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    will-change: transform;
+}
+
+.btnSecondary:hover {
+    transform: translateY(-2px);
+    border-color: var(--gold);
+}
+
+.btnSecondary:active {
+    transform: translateY(0);
+}
+
+/* Features */
+.features {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.featureCheck {
+    color: var(--gold);
+    font-size: 0.9rem;
+}
+
+/* Background grid for depth */
+.bgGrid {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .heading {
+        font-size: 3rem;
+    }
+
+    .heroInner {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding: 6rem 1.5rem 2rem;
+    }
+
+    .heroInner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .heroLeft {
+        max-width: 100%;
+    }
+
+    .heading {
+        font-size: 2.25rem;
+    }
+
+    .description {
+        max-width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .badge {
+        margin-bottom: 1.5rem;
+    }
+
+    .ctaGroup {
+        justify-content: center;
+    }
+
+    .features {
+        justify-content: center;
+    }
+
+    .headingBar {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.85rem;
+    }
+
+    .ctaGroup {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}

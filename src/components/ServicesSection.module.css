@@ -1,0 +1,184 @@
+.servicesSection {
+    padding: 8rem 3rem;
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.header {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 5rem;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--gold);
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background-color: var(--gold);
+    margin: 0 auto 2rem;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.description p {
+    margin-bottom: 1rem;
+}
+
+.description p:last-child {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    border-color: rgba(255, 77, 0, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Corner bracket accents */
+.bracket {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    opacity: 0.3;
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover .bracket {
+    opacity: 0.8;
+    border-color: var(--gold);
+}
+
+.tl {
+    top: 16px;
+    left: 16px;
+    border-top-color: var(--text-muted);
+    border-left-color: var(--text-muted);
+}
+
+.tr {
+    top: 16px;
+    right: 16px;
+    border-top-color: var(--text-muted);
+    border-right-color: var(--text-muted);
+}
+
+.bl {
+    bottom: 16px;
+    left: 16px;
+    border-bottom-color: var(--text-muted);
+    border-left-color: var(--text-muted);
+}
+
+.br {
+    bottom: 16px;
+    right: 16px;
+    border-bottom-color: var(--text-muted);
+    border-right-color: var(--text-muted);
+}
+
+
+.iconWrapper {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: var(--gold);
+    background: rgba(255, 77, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover .iconWrapper {
+    background: var(--gold);
+    color: var(--bg-primary);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 77, 0, 0.4);
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.cardDescription {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .servicesSection {
+        padding: 5rem 1.5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
